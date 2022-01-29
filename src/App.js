@@ -15,6 +15,7 @@ function App() {
   };
 
   useEffect(()=>{
+    const todoCollectionRef = collection(db, 'todos')
     const getTodos = async() => {
       const data = await getDocs(todoCollectionRef);
       // console.log(data);
